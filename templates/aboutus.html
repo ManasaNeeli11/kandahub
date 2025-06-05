@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Divya Ramayan</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* Background & Body */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #f9d976 0%, #f39f86 100%);
+      color: #3e2723;
+      min-height: 100vh;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      background-attachment: fixed;
+    }
+
+    /* Container */
+    .container {
+      max-width: 900px;
+      margin: 5rem auto 6rem;
+      padding: 2.5rem 3rem;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      backdrop-filter: blur(12px);
+      animation: fadeInUp 1.2s ease forwards;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Heading Styles */
+    h1, h2 {
+      color: #e65100;
+      letter-spacing: 1.5px;
+      text-shadow: 1px 1px 3px rgba(255, 165, 0, 0.8);
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    h2.section-title {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1.2rem;
+      position: relative;
+      padding-left: 1.2rem;
+      border-left: 6px solid #f7c948;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    h2.section-title .icon {
+      position: absolute;
+      left: -35px;
+      top: 4px;
+      font-size: 1.5rem;
+      color: #f57c00;
+      filter: drop-shadow(0 0 1px #e65100);
+    }
+
+    /* Paragraphs */
+    p {
+      font-size: 1.18rem;
+      line-height: 1.9;
+      color: #5d4037;
+      letter-spacing: 0.03em;
+      margin-bottom: 1.2rem;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    /* List styles */
+    ul {
+      padding-left: 1.6rem;
+      margin-bottom: 2rem;
+    }
+
+    ul li {
+      font-size: 1.15rem;
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.4rem;
+      cursor: default;
+      transition: color 0.3s ease;
+      letter-spacing: 0.02em;
+    }
+
+    ul li::before {
+      content: "✔";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      color: #f57c00;
+      font-weight: 700;
+      text-shadow: 0 0 2px #e65100;
+    }
+
+    ul li:hover {
+      color: #e65100;
+      font-weight: 600;
+    }
+
+    /* Icons */
+    .icon {
+      color: #f57c00;
+      margin-right: 0.6rem;
+      filter: drop-shadow(0 0 1px #e65100);
+    }
+
+    /* Contact Section */
+    .contact {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: #6d4c41;
+      margin-top: 3rem;
+      letter-spacing: 0.04em;
+    }
+
+    .contact a {
+      color: #1565c0;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .contact a:hover {
+      color: #003c8f;
+      text-decoration: underline;
+    }
+
+    /* Horizontal line */
+    hr {
+      border: none;
+      height: 3px;
+      background: linear-gradient(90deg, #f7c948, #f57c00, #e65100);
+      border-radius: 50px;
+      margin: 3rem 0;
+      opacity: 0.95;
+      box-shadow: 0 0 10px #f57c00aa;
+    }
+
+    /* Scroll to Top Button */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: linear-gradient(45deg, #f57c00, #e65100);
+      border: none;
+      color: white;
+      border-radius: 50%;
+      padding: 14px 18px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(229, 81, 0, 0.6);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 9999;
+    }
+
+    .scroll-top-btn:hover {
+      background: linear-gradient(45deg, #e65100, #b43e00);
+      transform: scale(1.15);
+      box-shadow: 0 12px 30px rgba(229, 81, 0, 0.8);
+    }
+
+    /* Back to Home Arrow Button - improved positioning */
+    .back-home-arrow {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1050; /* higher than other elements */
+      background: rgba(255, 255, 255, 0.85);
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1.5px solid #e65100;
+      font-size: 1.4rem;
+      color: #e65100;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      user-select: none;
+      box-shadow: 0 2px 6px rgba(230, 81, 0, 0.45);
+      text-decoration: none;
+    }
+
+    .back-home-arrow:hover,
+    .back-home-arrow:focus {
+      background: #e65100;
+      color: white;
+      border-color: #b43e00;
+      box-shadow: 0 4px 12px rgba(180, 62, 0, 0.8);
+      outline: none;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .container {
+        margin: 4rem auto 5rem;
+        padding: 2rem 2.5rem;
+      }
+      
+      h1 {
+        font-size: 2.6rem;
+      }
+      
+      h2.section-title {
+        font-size: 1.8rem;
+        margin-top: 2.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 2rem 1.8rem;
+        margin: 3.5rem auto 4rem;
+        border-radius: 15px;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+      }
+
+      h2.section-title {
+        font-size: 1.5rem;
+        padding-left: 1rem;
+        border-left-width: 4px;
+        margin-top: 2rem;
+      }
+      
+      h2.section-title .icon {
+        left: -30px;
+        font-size: 1.3rem;
+      }
+      
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+      
+      ul li {
+        font-size: 1.05rem;
+      }
+      
+      .contact {
+        font-size: 1.05rem;
+      }
+      
+      .back-home-arrow {
+        top: 15px;
+        left: 15px;
+        font-size: 1.2rem;
+        padding: 5px 10px;
+        border-radius: 6px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding: 1.5rem 1.2rem;
+        margin: 3rem auto 3.5rem;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+      }
+      
+      h2.section-title {
+        font-size: 1.3rem;
+        padding-left: 0.8rem;
+        margin-top: 1.8rem;
+      }
+      
+      h2.section-title .icon {
+        left: -25px;
+        font-size: 1.1rem;
+        top: 3px;
+      }
+      
+      p {
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+      
+      ul {
+        padding-left: 1.2rem;
+      }
+      
+      ul li {
+        font-size: 0.95rem;
+        padding-left: 1.2rem;
+      }
+      
+      .contact {
+        font-size: 0.95rem;
+        margin-top: 2rem;
+      }
+      
+      hr {
+        margin: 2rem 0;
+      }
+      
+      .scroll-top-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 14px;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 1.6rem;
+      }
+      
+      h2.section-title {
+        font-size: 1.1rem;
+      }
+      
+      .container {
+        padding: 1.2rem 0.8rem;
+      }
+      
+      /* Optional: hide back-home-arrow on very small screens, uncomment if needed */
+      /*
+      .back-home-arrow {
+        display: none;
+      }
+      */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Back to Home Arrow Button -->
+  <a href="{% url 'home' %}" class="back-home-arrow" aria-label="Go to home page">
+    <i class="fas fa-arrow-left" aria-hidden="true"></i> 
+  </a>
+
+  <div class="container" role="main" aria-label="About us content">
+    <h1 class="text-center fw-bold mb-4" aria-level="1">
+      <i class="fas fa-book-open icon" aria-hidden="true"></i>About Us
+    </h1>
+    <p>
+      Hi and welcome to <strong>our Page</strong>. My name is <strong>Manasa Neeli</strong>, and I am the creator of this platform. First of all, thank you for visiting! Whether you're a returning reader or here for the first time, I'm truly honored to have you.
+    </p>
+    <p>
+      This page gives you a short introduction to myself, this website, and the divine purpose behind it. I hope your time here brings knowledge, inspiration, and spiritual joy.
+    </p>
+
+    <!-- My Introduction -->
+    <h2 class="section-title" aria-level="2"><i class="fas fa-user-graduate icon" aria-hidden="true"></i>My Introduction</h2>
+    <p>
+      I am currently pursuing a <strong>B.Tech in Artificial Intelligence</strong>. With a deep passion for technology and problem-solving, I specialize in building modern, responsive websites using both frontend and backend technologies. I love crafting digital experiences that are both functional and beautiful.
+    </p>
+
+    <!-- The Story -->
+    <h2 class="section-title" aria-level="2"><i class="fas fa-feather icon" aria-hidden="true"></i>The Story</h2>
+    <p>
+      The inspiration behind <strong>Valmiki Ramayanam</strong> comes from a lifelong admiration of the epic — a divine story of devotion, dharma, and duty. This scripture, passed through generations, continues to guide humanity in understanding righteousness and values.
+    </p>
+    <p>
+      Deeply touched by these stories from a young age, I felt called to bring them into the digital space where readers worldwide could connect with their wisdom.
+    </p>
+
+    <!-- The Vision -->
+    <h2 class="section-title" aria-level="2"><i class="fas fa-eye icon" aria-hidden="true"></i>The Vision</h2>
+    <p>
+      Our vision is to create a sacred digital space where people from all walks of life can discover the truth and beauty of Ramayanam. We want to go beyond storytelling and offer a spiritual lens for life.
+    </p>
+    <p>
+      Culture, values, and spiritual knowledge — preserved and celebrated here for generations to come.
+    </p>
+
+    <!-- The Mission -->
+    <h2 class="section-title" aria-level="2"><i class="fas fa-bullseye icon" aria-hidden="true"></i>The Mission</h2>
+    <p>Our mission is to:</p>
+    <ul>
+      <li>Share Ramayanam in a simple, respectful, and modern way</li>
+      <li>Offer spiritual and character insights into key figures like Rama, Sita, Hanuman, and more</li>
+      <li>Promote truth, sacrifice, duty, and compassion</li>
+      <li>Encourage learning about Indian heritage and its modern relevance</li>
+    </ul>
+
+    <hr />
+
+    <!-- Footer -->
+    <p class="fw-semibold contact" aria-label="Thank you and contact information">
+      <i class="fas fa-heart icon" aria-hidden="true"></i>Thank you for reading and being a part of this sacred journey.<br><br>
+      With gratitude,<br />
+      <strong>Manasa Neeli</strong><br />
+      <a href="mailto:manasaneeli57@gmail.com" aria-label="Email manasaneeli57@gmail.com">
+        <i class="fas fa-envelope icon" aria-hidden="true"></i>manasaneeli57@gmail.com
+      </a>
+    </p>
+  </div>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" aria-label="Scroll to top" title="Scroll to top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    // Add animation delay to container elements for better loading
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      container.style.animationDelay = '0.2s';
+    });
+  </script>
+</body>
+</html>
