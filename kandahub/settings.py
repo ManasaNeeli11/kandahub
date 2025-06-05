@@ -126,6 +126,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
 # Allowed hosts
+DEBUG = True
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost']  # Local development
 else:
