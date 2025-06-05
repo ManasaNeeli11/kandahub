@@ -127,9 +127,10 @@ DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
 # Allowed hosts
 if DEBUG:
-    ALLOWED_HOSTS = []  # Local dev
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']  # Local development
 else:
-    ALLOWED_HOSTS = ['kandahub.onrender.com']  # Production domain (update as needed)
+    ALLOWED_HOSTS = ['kandahub.onrender.com']  # Production domain
+
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
@@ -161,3 +162,15 @@ else:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 print("MIDDLEWARE list:", MIDDLEWARE)
+LOGGING = {
+    'version': 1,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'root': {
+        'handlers': ['console'],
+        'level': 'DEBUG',
+    },
+}
