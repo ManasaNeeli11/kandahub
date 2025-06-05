@@ -22,10 +22,6 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-w$2+h(bn0ud^6*d+n33aj=3r2ivmxgv0wu0=e$8n@llqc^3hg0'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,13 +38,19 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',  # 1
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # 2
+    'django.contrib.messages.middleware.MessageMiddleware',      # 3
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
+
 
 ROOT_URLCONF = 'kandahub.urls'
 
@@ -113,38 +115,49 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.1/howto/static-files/
+import os
+from pathlib import Path
+import dj_database_url
 
-STATIC_URL = 'static/'
+# Base directory
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Read environment variables
+DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
+
+# Allowed hosts
+if DEBUG:
+    ALLOWED_HOSTS = []  # Local dev
+else:
+    ALLOWED_HOSTS = ['kandahub.onrender.com']  # Production domain (update as needed)
+
+# Static files (CSS, JavaScript, Images)
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory where collectstatic will gather static files for production
+STATICFILES_DIRS = [BASE_DIR / 'static']  # Your local static files folder
+
+# Media files (user-uploaded)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
+
+# Database config:
+if DEBUG:
+    # Use SQLite locally
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+else:
+    # Use PostgreSQL in production (from DATABASE_URL env var)
+    DATABASES = {
+        'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+    }
 
 # Default primary key field type
-# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-import os
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-#mediafile upload
-MEDIA_URL='/media/'
-MEDIA_ROOT=os.path.join(BASE_DIR,'media')
-# settings.py
-
-import os
-import dj_database_url
-
-DEBUG = False
-ALLOWED_HOSTS = ['*']  # Or specify your domain
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-# Static files
-STATIC_URL = '/static/'
-
-# WhiteNoise Middleware for serving static files
-MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
-
-# Database (for PostgreSQL on Render)
-import dj_database_url
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
-
-
+print("MIDDLEWARE list:", MIDDLEWARE)

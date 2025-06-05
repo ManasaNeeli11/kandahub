@@ -83,7 +83,8 @@ def kandas(request):
     kandas = [
         {
             "title": "Bala Kanda",
-            "image_url": settings.MEDIA_URL + "pictures/7KANDA-1.jpg",
+             
+            "image_url": settings.STATIC_URL + "media/pictures/7KANDA-1.jpg",
             "brief": "Witness the divine beginnings! Bala Kanda unfolds the enchanting childhood of Lord Rama, filled with wisdom, valor, and celestial grace. From sacred birth to the legendary swayamvara of Sita, every moment is a glimpse of destiny in motion.",
             "full_story_points": [
                 "Divine birth of Lord Rama in Ayodhya.",
@@ -96,7 +97,7 @@ def kandas(request):
         },
         {
             "title": "Ayodhya Kanda",
-            "image_url": settings.MEDIA_URL + "pictures/7KANDA-2.jpg",
+            "image_url": settings.STATIC_URL + "media/pictures/7KANDA-2.jpg",
             "brief": "Dive into sacrifice and sorrow. Ayodhya Kanda captures the emotional saga of Rama’s exile, a tale of royal politics, motherly betrayal, and unwavering dharma.",
             "full_story_points": [
                 "Dasharatha’s joy at Rama’s coronation turns into despair.",
@@ -109,7 +110,7 @@ def kandas(request):
         },
         {
             "title": "Aranya Kanda",
-            "image_url": settings.MEDIA_URL + "pictures/7KANDA-3.jpg",
+            "image_url": settings.STATIC_URL + "media/pictures/7KANDA-3.jpg",
             "brief": "Enter the sacred wild! Aranya Kanda brings to life the exile journey—encounters with sages, demons, and the dark turn with Sita’s abduction.",
             "full_story_points": [
                 "Forest wanderings filled with divine and demonic interactions.",
@@ -122,7 +123,7 @@ def kandas(request):
         },
         {
             "title": "Kishkindha Kanda",
-            "image_url": settings.MEDIA_URL + "pictures/7KANDA-4.jpg",
+            "image_url": settings.STATIC_URL + "media/pictures/7KANDA-4.jpg",
             "brief": "Bonds beyond blood! Kishkindha Kanda weaves brotherhood, loyalty, and new hope as Rama meets Hanuman and allies with the monkey king Sugriva.",
             "full_story_points": [
                 "Rama meets Hanuman and forms an eternal bond.",
@@ -135,7 +136,7 @@ def kandas(request):
         },
         {
             "title": "Sundara Kanda",
-            "image_url": settings.MEDIA_URL + "pictures/7KANDA-6.jpg",
+            "image_url": settings.STATIC_URL + "media/pictures/7KANDA-6.jpg",
             "brief": "A saga of strength and devotion! Sundara Kanda follows Hanuman’s heroic leap across the ocean, bringing hope to a grieving heart.",
             "full_story_points": [
                 "Hanuman crosses the ocean defying all odds.",
@@ -148,7 +149,7 @@ def kandas(request):
         },
         {
             "title": "Yuddha Kanda",
-            "image_url": settings.MEDIA_URL + "pictures/7KANDA-5.jpg",
+            "image_url": settings.STATIC_URL + "media/pictures/7KANDA-5.jpg",
             "brief": "Good versus evil in its grandest form! Yuddha Kanda roars with war cries, heroism, divine weapons, and the fall of the tyrant Ravana.",
             "full_story_points": [
                 "Bridge to Lanka is built by Rama’s army.",
@@ -161,7 +162,7 @@ def kandas(request):
         },
         {
             "title": "Uttara Kanda",
-            "image_url": settings.MEDIA_URL + "pictures/7KANDA-7.jpg",
+            "image_url": settings.STATIC_URL + "media/pictures/7KANDA-7.jpg",
             "brief": "After the storm, comes the test of peace. Uttara Kanda portrays Rama’s reign, Sita’s sorrow, and the bittersweet farewell of a divine king.",
             "full_story_points": [
                 "Rama returns to Ayodhya and is crowned king.",

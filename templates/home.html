@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
+   
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <style>
     body {
       background: 
@@ -542,7 +544,10 @@
 <nav class="navbar navbar-expand-lg navbar-custom shadow-sm px-3">
   <div class="container-fluid">
     <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-      <img src="media/pictures/KHUBNEW.jpg" alt="KanadaHub Logo" class="logo-img" />
+      
+      
+
+      <img src="{% static 'media/pictures/KHUBNEW.jpg' %}"alt="KanadaHub Logo" class="logo-img" />
       <div class="brand-text d-flex flex-column">
         <span class="kanda">Kanda</span>
         <span class="hub">Hub</span>
@@ -592,15 +597,18 @@
   
   <!-- Image Gallery -->
   <div class="image-gallery">
-    <div class="img-container"><img src="media/pictures/now rama 2.jpg" alt="Sita" /></div>
-    <div class="img-container"><img src="media/pictures/original_setha.jpg" alt="Lord Rama" /></div>
-    <div class="img-container"><img src="media/pictures/RAMA2.jpg" alt="Rama 2" /></div>
-    <div class="img-container"><img src="media/pictures/ram-sita.jpg" alt="Ram and Sita" /></div>
-    <div class="img-container"><img src="media/pictures/original_ravana.jpg" alt="Lava Kusha" /></div>
-    <div class="img-container"><img src="media/pictures/nowrama.jpg" alt="Lord Rama" /></div>
-    <div class="img-container"><img src="media/pictures/now lava and kusha.jpg" alt="Rama 3" /></div>
-    <div class="img-container"><img src="media/pictures/ayodhya.jpg" alt="Ayodhya" /></div>
-    <div class="img-container"><img src="media/pictures/all rama.jpg" alt="Dasharatha" /></div>
+    
+   
+   
+    <div class="img-container"><img src="{% static 'media/pictures/now rama 2.jpg' %}" alt="Sita" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/original_setha.jpg' %}" alt="Lord Rama" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/RAMA2.jpg' %}"alt="Rama 2" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/ram-sita.jpg' %}" alt="Ram and Sita" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/original_ravana.jpg' %}" alt="Lava Kusha" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/nowrama.jpg' %}" alt="Lord Rama" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/now lava and kusha.jpg' %}" alt="Rama 3" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/ayodhya.jpg' %}" alt="Ayodhya" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/all rama.jpg' %}" alt="Dasharatha" /></div>
   </div>
   
   <!-- Kandas Section -->
@@ -661,6 +669,7 @@
 
       <!-- Right Column: Images -->
       <div class="col-lg-5 col-md-12 d-flex flex-column align-items-center mt-4 mt-lg-0">
+        
         <img src="media/pictures/kanda_home_1.jpg" alt="Kandas Overview 1"
           class="img-fluid rounded shadow mb-3 mb-md-4"
           style="height: 180px; width: 100%; object-fit: cover;"
@@ -690,21 +699,22 @@
 
     <div class="ramayana-cards">
       <div class="ramayana-card">
-        <img src="/media/pictures/QUIZ1.jpg" alt="Divine Journey Image">
+      
+        <img src= "{% static 'media/pictures/QUIZ1.jpg' %}" alt="Divine Journey Image">
         <h5>Discover the Divine Journey</h5>
         <p>Explore the sacred stories of Lord Rama, Sita, and Hanuman, and understand the timeless values they teach. Take our quizzes to deepen your knowledge and embrace the spiritual wisdom of the Ramayana.</p>
         <a href="{% url 'quizzes' %}" class="btn-visit-quiz">Visit Quiz</a>
       </div>
 
       <div class="ramayana-card">
-        <img src="/media/pictures/7KANDA-3.jpg" alt="Courage and Devotion Image">
+        <img src= "{% static 'media/pictures/7KANDA-3.jpg' %}" alt="Courage and Devotion Image">
         <h5>Embrace Courage & Devotion</h5>
         <p>Learn how the epic inspires courage, loyalty, and righteousness through its legendary characters. Challenge yourself with questions that highlight the virtues guiding us even today.</p>
         <a href="{% url 'quizzes' %}" class="btn-visit-quiz">Visit Quiz</a>
       </div>
 
       <div class="ramayana-card">
-        <img src="/media/pictures/Quiz2.jpg" alt="Connect and Enlighten Image">
+        <img src= "{% static 'media/pictures/Quiz2.jpg' %}" alt="Connect and Enlighten Image">
         <h5>Connect & Enlighten</h5>
         <p>Join a vibrant community eager to share and grow in the wisdom of Ramayana. Our interactive quizzes make learning fun and meaningful, motivating you to keep exploring this epic's spiritual depth.</p>
         <a href="{% url 'quizzes' %}" class="btn-visit-quiz">Visit Quiz</a>
