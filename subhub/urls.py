@@ -9,7 +9,7 @@ urlpatterns=[
       path("explore/", views.explore,name="explore"),
       path('logout/', views.logout, name='logout'),
     path('quizzes/', views.quizzes, name='quizzes'),
-   path('quizzes/', views.quizzes_list, name='quizzesd'),
+   path('quizzes/', views.quizzes_list, name='quizzes'),
     path('quizzes/<int:quiz_id>/', views.quiz_detail, name='quiz_detail'),
    
     
