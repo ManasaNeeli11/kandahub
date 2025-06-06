@@ -245,7 +245,7 @@ def quizzes_list(request):
     quizzes = Quiz.objects.all()
     return render(request, 'quizzes_list.html', {'quiz_topics': quizzes})
 
-@login_required
+# @login_required
 def quiz_detail(request, quiz_id):
     quiz = get_object_or_404(Quiz, id=quiz_id)
     questions = quiz.questions.prefetch_related('choices').all()
