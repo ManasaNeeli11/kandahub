@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'subhub'
+    'subhub.apps.SubhubConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -81,18 +82,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kandahub.wsgi.application'
 
+DEBUG = True
 
 
-# ✔️ DATABASES: Handles both dev and production
 if DEBUG:
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'kandahub',
-            'USER': 'manu',
-            'PASSWORD': '22am1a3157',
-            'HOST': 'localhost',
-            'PORT': '5432',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
 else:
@@ -103,6 +100,7 @@ else:
             ssl_require=True
         )
     }
+
 
 
 # Password validation
@@ -170,3 +168,4 @@ LOGGING = {
         'level': 'ERROR',  # Log only errors (not DEBUG or INFO)
     },
 }
+
