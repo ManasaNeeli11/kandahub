@@ -278,3 +278,12 @@ def quiz_detail(request, quiz_id):
 def quiz_list_view(request):
     quiz_topics = Quiz.objects.all()
     return render(request, 'quizzes.html', {'quiz_topics': quiz_topics})
+
+import logging
+from django.views.defaults import server_error
+
+logger = logging.getLogger(__name__)
+
+def custom_500(request):
+    logger.error("Server error on path: %s", request.path, exc_info=True)
+    return server_error(request)

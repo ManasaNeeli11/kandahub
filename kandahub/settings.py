@@ -166,6 +166,7 @@ print("MIDDLEWARE list:", MIDDLEWARE)
 
 LOGGING = {
     'version': 1,
+    'disable_existing_loggers': False,  # Keep existing Django loggers active
     'handlers': {
         'console': {
             'class': 'logging.StreamHandler',
@@ -173,6 +174,6 @@ LOGGING = {
     },
     'root': {
         'handlers': ['console'],
-        'level': 'DEBUG',
+        'level': 'ERROR',  # Log only errors (not DEBUG or INFO)
     },
 }
