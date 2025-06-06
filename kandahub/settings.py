@@ -163,6 +163,7 @@ else:
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 print("MIDDLEWARE list:", MIDDLEWARE)
+
 LOGGING = {
     'version': 1,
     'handlers': {
