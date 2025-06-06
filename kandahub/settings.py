@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'subhub.apps.SubhubConfig',
 
 ]
-LOGIN_URL = '/login/'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
