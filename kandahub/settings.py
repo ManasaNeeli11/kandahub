@@ -126,12 +126,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 DEBUG = os.getenv('DEBUG', 'False').lower() == 'true'
 
 # Allowed hosts
-DEBUG = True
-if DEBUG:
-    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']  # Local development
-else:
-    ALLOWED_HOSTS = ['kandahub.onrender.com']  # Production domain
+# DEBUG=True
+DEBUG = os.getenv('DEBUG', 'False') == 'True'
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
+if not DEBUG:
+    ALLOWED_HOSTS.append('kandahub.onrender.com')
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
