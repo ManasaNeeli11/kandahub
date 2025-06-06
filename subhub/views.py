@@ -1,4 +1,5 @@
 import re
+import logging
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
@@ -7,6 +8,7 @@ from django.conf import settings
 from .models import Quiz, Question, Choice, UserQuizResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
+logger = logging.getLogger(__name__)
 
 # Create your views here.
 def home(request):
@@ -41,14 +43,15 @@ def signup(request):
             return render(request, "signup.html", {"error": "Email already in use"})
 
         # Create user with hashed password
-        user = User.objects.create_user(username=username, email=email, password=password1)
-        user.save()
-
-        return redirect('login')
+        try:
+            user = User.objects.create_user(username=username, email=email, password=password1)
+            user.save()
+            return redirect('login')
+        except Exception as e:
+            logger.error("Error creating user: %s", e, exc_info=True)
+            return render(request, "signup.html", {"error": "An error occurred while creating the user."})
 
     return render(request, "signup.html")
-
-
 
 def login(request):
     if request.method == 'POST':
@@ -76,7 +79,7 @@ def explore(request):
     # your logic
     return render(request, 'explore.html')
 
-@login_required(login_url='login')
+
 
 
 def kandas(request):
