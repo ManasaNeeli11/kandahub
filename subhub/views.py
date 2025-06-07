@@ -194,51 +194,9 @@ def logout(request):
 
 
 def quizzes(request):
-    quiz_topics = [
-        {
-            'id': 1,
-            'title': 'Bala Kanda Quiz',
-            'description': 'Questions on the childhood and early life of Lord Rama.',
-            'num_questions': 3
-        },
-        {
-            'id': 2,
-            'title': 'Ayodhya Kanda Quiz',
-            'description': 'Test your knowledge about Rama’s exile and challenges.',
-            'num_questions': 3
-        },
-        {
-            'id': 3,
-            'title': 'Aranya Kanda Quiz',
-            'description': 'Quiz on Rama’s life in the forest and the challenges faced there.',
-            'num_questions': 3
-        },
-        {
-            'id': 4,
-            'title': 'Kishkindha Kanda Quiz',
-            'description': 'Explore the alliance between Rama and the monkey kingdom.',
-            'num_questions': 6
-        },
-        {
-            'id': 5,
-            'title': 'Sundara Kanda Quiz',
-            'description': 'Test your knowledge about Hanuman’s heroic journey to Lanka.',
-            'num_questions': 6
-        },
-        {
-            'id': 6,
-            'title': 'Yuddha Kanda Quiz',
-            'description': 'Questions on the epic battle between Rama and Ravana.',
-            'num_questions': 6
-        },
-        {
-            'id': 7,
-            'title': 'Uttara Kanda Quiz',
-            'description': 'Quizzes about Rama’s return and later life.',
-            'num_questions': 6
-        },
-    ]
+    quiz_topics = Quiz.objects.all()
     return render(request, 'quizzes.html', {'quiz_topics': quiz_topics})
+
 
 
 def quizzes_list(request):
