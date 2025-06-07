@@ -1,5 +1,6 @@
 from django.urls import path
 from subhub import views
+
 urlpatterns=[
     path("",views.home,name="home"),
     path("signup/",views.signup,name="signup"),
@@ -11,6 +12,7 @@ urlpatterns=[
     path('quizzes/', views.quizzes, name='quizzes'),
    path('quizzes/', views.quizzes_list, name='quizzess'),
     path('quizzes/<int:quiz_id>/', views.quiz_detail, name='quiz_detail'),
+    
    
     
 ]
