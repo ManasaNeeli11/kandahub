@@ -6,4 +6,6 @@ services:
     startCommand: "gunicorn kandahub.wsgi"
     healthCheckPath: "/"
     autoDeploy: true
-    deployCommand: "python manage.py migrate"
+    deployCommand: |
+      python manage.py migrate
+      python manage.py createsuperuser --noinput

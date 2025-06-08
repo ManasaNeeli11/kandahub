@@ -84,25 +84,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'kandahub.wsgi.application'
 
-DEBUG = True
 
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.config(
-            default=os.getenv('DATABASE_URL'),
-            conn_max_age=600,
-            ssl_require=True
-        )
-    }
 
+DEBUG = os.getenv("DEBUG", "False") == "True"
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=not DEBUG  # only require SSL if not in debug
+    )
+}
 
 
 # Password validation
@@ -136,6 +129,9 @@ USE_I18N = True
 USE_TZ = True
 
 
+# Secure cookies for production (HTTPS)
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 
 
