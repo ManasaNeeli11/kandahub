@@ -261,3 +261,14 @@ logger = logging.getLogger(__name__)
 def custom_500(request):
     logger.error("Server error on path: %s", request.path, exc_info=True)
     return server_error(request)
+
+def fix_admin_user(request):
+    try:
+        user = User.objects.get(username='admin')
+        user.set_password('manasaneeli57')  # Set your desired password here
+        user.is_staff = True
+        user.is_superuser = True
+        user.save()
+        return HttpResponse("Admin user updated successfully.")
+    except User.DoesNotExist:
+        return HttpResponse("Admin user not found.")
