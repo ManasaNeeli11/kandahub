@@ -14,14 +14,18 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# TEMP: Adding comment to force git to detect change
+
 from django.contrib import admin
 from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
+from subhub.views import create_superuser
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("subhub.urls")),
+    path('create-superuser/', create_superuser),
 ]
 handler500 = 'subhub.views.custom_500'   
 if settings.DEBUG:
