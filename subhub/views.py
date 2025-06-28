@@ -8,11 +8,26 @@ from django.conf import settings
 from .models import Quiz, Question, Choice, UserQuizResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
+from django.http import HttpResponse
 logger = logging.getLogger(__name__)
 
 # Create your views here.
 def home(request):
     return render(request,"home.html")
+
+#quizes
+def add_quizzes(request):
+    if not Quiz.objects.filter(title="Bala Kanda Quiz").exists():
+        Quiz.objects.create(title="Bala Kanda Quiz", description="Questions on the childhood and early life of Lord Rama.", number_of_questions=6)
+        Quiz.objects.create(title="Ayodhya Kanda Quiz", description="Test your knowledge about Rama’s exile and challenges.", number_of_questions=6)
+        Quiz.objects.create(title="Aranya Kanda Quiz", description="Quiz on Rama’s life in the forest and the challenges faced there.", number_of_questions=6)
+        Quiz.objects.create(title="Kishkindha Kanda Quiz", description="Explore the alliance between Rama and the monkey kingdom.", number_of_questions=6)
+        Quiz.objects.create(title="Sundara Kanda Quiz", description="Test your knowledge about Hanuman’s heroic journey to Lanka.", number_of_questions=6)
+        Quiz.objects.create(title="Yuddha Kanda Quiz", description="Questions on the epic battle between Rama and Ravana.", number_of_questions=6)
+        Quiz.objects.create(title="Uttara Kanda Quiz", description="Quizzes about Rama’s return and later life.", number_of_questions=6)
+        return HttpResponse("Quizzes added successfully!")
+    else:
+        return HttpResponse("Quizzes already exist.")
 
 
 def signup(request):

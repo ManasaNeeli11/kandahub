@@ -17,6 +17,7 @@ import dj_database_url
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -89,14 +90,14 @@ WSGI_APPLICATION = 'kandahub.wsgi.application'
 
 DEBUG = os.getenv("DEBUG", "False") == "True"
 
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=not DEBUG  # only require SSL if not in debug
-    )
-}
+# ✔ DATABASES: Handles both dev and production
 
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -134,16 +135,14 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 
+DEBUG=True
 
-
-# Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'  # Directory where collectstatic will gather static files for production
-STATICFILES_DIRS = [BASE_DIR / 'static']  # Your local static files folder
+STATICFILES_DIRS = [BASE_DIR / "static"]  # This tells Django where your dev static files live
+STATIC_ROOT = BASE_DIR / "staticfiles"    # For production (collectstatic)
 
-# Media files (user-uploaded)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR / "media"
 
 
 
