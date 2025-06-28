@@ -272,3 +272,8 @@ def fix_admin_user(request):
         return HttpResponse("Admin user updated successfully.")
     except User.DoesNotExist:
         return HttpResponse("Admin user not found.")
+
+def list_superusers(request):
+    superusers = User.objects.filter(is_superuser=True)
+    usernames = ', '.join([user.username for user in superusers])
+    return HttpResponse(f"Superusers: {usernames}")
