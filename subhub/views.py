@@ -3,31 +3,29 @@ import logging
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
+from django.http import HttpResponse
 from django.contrib.auth import authenticate, login as auth_login , logout as auth_logout
 from django.conf import settings
 from .models import Quiz, Question, Choice, UserQuizResponse
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
-from django.http import HttpResponse
 logger = logging.getLogger(__name__)
 
 # Create your views here.
 def home(request):
     return render(request,"home.html")
 
-#quizes
-def add_quizzes(request):
-    if not Quiz.objects.filter(title="Bala Kanda Quiz").exists():
-        Quiz.objects.create(title="Bala Kanda Quiz", description="Questions on the childhood and early life of Lord Rama.")
-        Quiz.objects.create(title="Ayodhya Kanda Quiz", description="Test your knowledge about Rama’s exile and challenges.")
-        Quiz.objects.create(title="Aranya Kanda Quiz", description="Quiz on Rama’s life in the forest and the challenges faced there.")
-        Quiz.objects.create(title="Kishkindha Kanda Quiz", description="Explore the alliance between Rama and the monkey kingdom.")
-        Quiz.objects.create(title="Sundara Kanda Quiz", description="Test your knowledge about Hanuman’s heroic journey to Lanka.")
-        Quiz.objects.create(title="Yuddha Kanda Quiz", description="Questions on the epic battle between Rama and Ravana.")
-        Quiz.objects.create(title="Uttara Kanda Quiz", description="Quizzes about Rama’s return and later life.")
-        return HttpResponse("Quizzes added successfully!")
+#superuser
+
+
+def create_superuser(request):
+    if not User.objects.filter(username="admin").exists():
+        User.objects.create_superuser('admin', 'admin@example.com', 'adminpassword')
+        return HttpResponse("Superuser created successfully!")
     else:
-        return HttpResponse("Quizzes already exist.")
+        return HttpResponse("Superuser already exists.")
+
+
 
 
 def signup(request):
