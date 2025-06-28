@@ -1,6 +1,6 @@
 from django.urls import path
 from subhub import views
-from .views import create_superuser
+from subhub.views import fix_admin_user
 
 urlpatterns=[
     path("",views.home,name="home"),
@@ -12,7 +12,8 @@ urlpatterns=[
       path('logout/', views.logout, name='logout'),
     path('quizzes/', views.quizzes, name='quizzes'),
    path('quizzes/', views.quizzes_list, name='quizzess'),
-   path('create-superuser/', create_superuser),
+   path('fix-admin-user/', fix_admin_user),
+  
  
     
    
