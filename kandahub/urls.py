@@ -21,15 +21,15 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from subhub.views import create_superuser
-from subhub.views import fix_admin_user
-from subhub.views import list_superusers
+#from subhub.views import fix_admin_user
+#from subhub.views import list_superusers
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", include("subhub.urls")),
     path('create-superuser/', create_superuser),
-    path('fix-admin-user/', fix_admin_user),
-    path('list-superusers/', list_superusers),
+    #path('fix-admin-user/', fix_admin_user),
+    #path('list-superusers/', list_superusers),
     
 ]
 handler500 = 'subhub.views.custom_500'   
