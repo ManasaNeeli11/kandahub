@@ -1,0 +1,2361 @@
+[
+{
+    "model": "subhub.quiz",
+    "pk": 1,
+    "fields": {
+        "title": "Ramayana Basics",
+        "description": "Test your basic knowledge of the Ramayana."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 2,
+    "fields": {
+        "title": "Characters of Ramayana",
+        "description": "Identify and understand the characters."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 3,
+    "fields": {
+        "title": "Events & Places",
+        "description": "Explore the major events and locations."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 4,
+    "fields": {
+        "title": "Bala Kanda Quiz",
+        "description": "Questions on the childhood and early life of Lord Rama."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 5,
+    "fields": {
+        "title": "Ayodhya Kanda Quiz",
+        "description": "Test your knowledge about Rama�s exile and challenges."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 6,
+    "fields": {
+        "title": "Aranya Kanda Quiz",
+        "description": "Quiz on Rama�s life in the forest and the challenges faced there."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 7,
+    "fields": {
+        "title": "Kishkindha Kanda Quiz",
+        "description": "Explore the alliance between Rama and the monkey kingdom."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 8,
+    "fields": {
+        "title": "Sundara Kanda Quiz",
+        "description": "Test your knowledge about Hanuman�s heroic journey to Lanka."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 9,
+    "fields": {
+        "title": "Yuddha Kanda Quiz",
+        "description": "Questions on the epic battle between Rama and Ravana."
+    }
+},
+{
+    "model": "subhub.quiz",
+    "pk": 10,
+    "fields": {
+        "title": "Uttara Kanda Quiz",
+        "description": "Quizzes about Rama�s return and later life."
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 1,
+    "fields": {
+        "quiz": 1,
+        "text": "Who is the author of the Ramayana?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 2,
+    "fields": {
+        "quiz": 1,
+        "text": "How many Kandas (books) are there in Ramayana?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 3,
+    "fields": {
+        "quiz": 1,
+        "text": "Who is Lord Rama's wife?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 4,
+    "fields": {
+        "quiz": 2,
+        "text": "Who is the brother of Lord Rama known for his devotion?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 5,
+    "fields": {
+        "quiz": 2,
+        "text": "Who carried the Sanjeevani herb?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 6,
+    "fields": {
+        "quiz": 2,
+        "text": "Who was the king of Lanka?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 7,
+    "fields": {
+        "quiz": 3,
+        "text": "Where was Sita held captive by Ravana?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 8,
+    "fields": {
+        "quiz": 3,
+        "text": "Which river did Lord Rama cross to go into exile?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 9,
+    "fields": {
+        "quiz": 3,
+        "text": "What bridge was built to reach Lanka?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 10,
+    "fields": {
+        "quiz": 4,
+        "text": "Who is the father of Lord Rama?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 11,
+    "fields": {
+        "quiz": 4,
+        "text": "Where was Lord Rama born?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 12,
+    "fields": {
+        "quiz": 4,
+        "text": "Who is Lord Rama's mother?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 13,
+    "fields": {
+        "quiz": 4,
+        "text": "Who was the guru of Rama and his brothers?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 14,
+    "fields": {
+        "quiz": 4,
+        "text": "Which weapon did Rama receive from Vishwamitra?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 15,
+    "fields": {
+        "quiz": 4,
+        "text": "Who is Rama�s loyal brother who accompanied him to the forest?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 16,
+    "fields": {
+        "quiz": 5,
+        "text": "Why was Rama sent to exile?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 17,
+    "fields": {
+        "quiz": 5,
+        "text": "Who accompanied Rama to the forest?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 18,
+    "fields": {
+        "quiz": 5,
+        "text": "How long was Rama�s exile?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 19,
+    "fields": {
+        "quiz": 5,
+        "text": "Who was the queen responsible for Rama�s exile?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 20,
+    "fields": {
+        "quiz": 5,
+        "text": "Where did Rama live during exile?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 21,
+    "fields": {
+        "quiz": 5,
+        "text": "Who is Rama�s wife?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 22,
+    "fields": {
+        "quiz": 6,
+        "text": "Who was the demon king killed by Rama in the forest?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 23,
+    "fields": {
+        "quiz": 6,
+        "text": "Who abducted Sita from the forest?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 24,
+    "fields": {
+        "quiz": 6,
+        "text": "Which monkey helped Rama in the forest?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 25,
+    "fields": {
+        "quiz": 6,
+        "text": "What is the name of the forest where Rama lived?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 26,
+    "fields": {
+        "quiz": 6,
+        "text": "Who was the king of Kishkindha?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 27,
+    "fields": {
+        "quiz": 6,
+        "text": "Who was killed by Rama to help Sugriva?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 28,
+    "fields": {
+        "quiz": 7,
+        "text": "Who is the monkey king who helped Rama?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 29,
+    "fields": {
+        "quiz": 7,
+        "text": "Who is the devoted monkey servant of Rama?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 30,
+    "fields": {
+        "quiz": 7,
+        "text": "Who was the elder brother of Sugriva?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 31,
+    "fields": {
+        "quiz": 7,
+        "text": "Who was killed by Rama to help Sugriva regain his throne?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 32,
+    "fields": {
+        "quiz": 7,
+        "text": "Which monkey kingdom allied with Rama?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 33,
+    "fields": {
+        "quiz": 7,
+        "text": "Who advised Rama on how to defeat Ravana?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 34,
+    "fields": {
+        "quiz": 8,
+        "text": "Who flew to Lanka to find Sita?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 35,
+    "fields": {
+        "quiz": 8,
+        "text": "What did Hanuman carry back from Lanka?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 36,
+    "fields": {
+        "quiz": 8,
+        "text": "Who did Hanuman meet in Lanka?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 37,
+    "fields": {
+        "quiz": 8,
+        "text": "How did Hanuman show Rama�s message to Sita?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 38,
+    "fields": {
+        "quiz": 8,
+        "text": "What did Hanuman do to Lanka after meeting Sita?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 39,
+    "fields": {
+        "quiz": 8,
+        "text": "Who was the king of Lanka at that time?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 40,
+    "fields": {
+        "quiz": 9,
+        "text": "Who was the main antagonist in the war?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 41,
+    "fields": {
+        "quiz": 9,
+        "text": "Who killed Ravana?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 42,
+    "fields": {
+        "quiz": 9,
+        "text": "Who supported Rama in the war?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 43,
+    "fields": {
+        "quiz": 9,
+        "text": "What weapon did Rama use to kill Ravana?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 44,
+    "fields": {
+        "quiz": 9,
+        "text": "Who was Vibhishana?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 45,
+    "fields": {
+        "quiz": 9,
+        "text": "Who was the commander of Ravana�s army?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 46,
+    "fields": {
+        "quiz": 10,
+        "text": "What happened after Rama returned to Ayodhya?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 47,
+    "fields": {
+        "quiz": 10,
+        "text": "Who did Rama send back to Lanka?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 48,
+    "fields": {
+        "quiz": 10,
+        "text": "Who is Lava and Kusha?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 49,
+    "fields": {
+        "quiz": 10,
+        "text": "Who wrote the Ramayana?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 50,
+    "fields": {
+        "quiz": 10,
+        "text": "What did Rama do at the end of his life?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 51,
+    "fields": {
+        "quiz": 10,
+        "text": "Who is Rama�s wife?"
+    }
+},
+{
+    "model": "subhub.question",
+    "pk": 52,
+    "fields": {
+        "quiz": 1,
+        "text": "Who is the brother of Rama?"
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 1,
+    "fields": {
+        "question": 1,
+        "text": "Valmiki",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 2,
+    "fields": {
+        "question": 1,
+        "text": "Vyasa",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 3,
+    "fields": {
+        "question": 1,
+        "text": "Tulsidas",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 4,
+    "fields": {
+        "question": 1,
+        "text": "Kalidasa",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 5,
+    "fields": {
+        "question": 2,
+        "text": "7",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 6,
+    "fields": {
+        "question": 2,
+        "text": "6",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 7,
+    "fields": {
+        "question": 2,
+        "text": "9",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 8,
+    "fields": {
+        "question": 2,
+        "text": "10",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 9,
+    "fields": {
+        "question": 3,
+        "text": "Sita",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 10,
+    "fields": {
+        "question": 3,
+        "text": "Radha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 11,
+    "fields": {
+        "question": 3,
+        "text": "Draupadi",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 12,
+    "fields": {
+        "question": 3,
+        "text": "Lakshmi",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 13,
+    "fields": {
+        "question": 4,
+        "text": "Lakshmana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 14,
+    "fields": {
+        "question": 4,
+        "text": "Bharata",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 15,
+    "fields": {
+        "question": 4,
+        "text": "Shatrughna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 16,
+    "fields": {
+        "question": 4,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 17,
+    "fields": {
+        "question": 5,
+        "text": "Hanuman",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 18,
+    "fields": {
+        "question": 5,
+        "text": "Sugriva",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 19,
+    "fields": {
+        "question": 5,
+        "text": "Jambavan",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 20,
+    "fields": {
+        "question": 5,
+        "text": "Indrajit",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 21,
+    "fields": {
+        "question": 6,
+        "text": "Ravana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 22,
+    "fields": {
+        "question": 6,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 23,
+    "fields": {
+        "question": 6,
+        "text": "Kumbhakarna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 24,
+    "fields": {
+        "question": 6,
+        "text": "Dasharatha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 25,
+    "fields": {
+        "question": 7,
+        "text": "Ashok Vatika",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 26,
+    "fields": {
+        "question": 7,
+        "text": "Lanka Palace",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 27,
+    "fields": {
+        "question": 7,
+        "text": "Dandaka Forest",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 28,
+    "fields": {
+        "question": 7,
+        "text": "Kishkindha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 29,
+    "fields": {
+        "question": 8,
+        "text": "Ganga",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 30,
+    "fields": {
+        "question": 8,
+        "text": "Yamuna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 31,
+    "fields": {
+        "question": 8,
+        "text": "Sarayu",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 32,
+    "fields": {
+        "question": 8,
+        "text": "Godavari",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 33,
+    "fields": {
+        "question": 9,
+        "text": "Rama Setu",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 34,
+    "fields": {
+        "question": 9,
+        "text": "Lakshman Jhula",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 35,
+    "fields": {
+        "question": 9,
+        "text": "Krishna Bridge",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 36,
+    "fields": {
+        "question": 9,
+        "text": "Hanuman Path",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 37,
+    "fields": {
+        "question": 10,
+        "text": "King Dasharatha",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 38,
+    "fields": {
+        "question": 10,
+        "text": "King Janaka",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 39,
+    "fields": {
+        "question": 10,
+        "text": "King Bharata",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 40,
+    "fields": {
+        "question": 10,
+        "text": "King Ravana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 41,
+    "fields": {
+        "question": 11,
+        "text": "Ayodhya",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 42,
+    "fields": {
+        "question": 11,
+        "text": "Lanka",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 43,
+    "fields": {
+        "question": 11,
+        "text": "Kishkindha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 44,
+    "fields": {
+        "question": 11,
+        "text": "Dandaka Forest",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 45,
+    "fields": {
+        "question": 12,
+        "text": "Kaushalya",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 46,
+    "fields": {
+        "question": 12,
+        "text": "Sumitra",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 47,
+    "fields": {
+        "question": 12,
+        "text": "Kaikeyi",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 48,
+    "fields": {
+        "question": 12,
+        "text": "Sita",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 49,
+    "fields": {
+        "question": 13,
+        "text": "Vishwamitra",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 50,
+    "fields": {
+        "question": 13,
+        "text": "Vashishta",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 51,
+    "fields": {
+        "question": 13,
+        "text": "Bharadwaj",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 52,
+    "fields": {
+        "question": 13,
+        "text": "Valmiki",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 53,
+    "fields": {
+        "question": 14,
+        "text": "Brahmastra",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 54,
+    "fields": {
+        "question": 14,
+        "text": "Sudarshana Chakra",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 55,
+    "fields": {
+        "question": 14,
+        "text": "Trishula",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 56,
+    "fields": {
+        "question": 14,
+        "text": "Pasha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 57,
+    "fields": {
+        "question": 15,
+        "text": "Lakshmana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 58,
+    "fields": {
+        "question": 15,
+        "text": "Bharata",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 59,
+    "fields": {
+        "question": 15,
+        "text": "Shatrughna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 60,
+    "fields": {
+        "question": 15,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 61,
+    "fields": {
+        "question": 16,
+        "text": "Due to Kaikeyi's boon",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 62,
+    "fields": {
+        "question": 16,
+        "text": "He chose to go",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 63,
+    "fields": {
+        "question": 16,
+        "text": "Due to Ravana's threat",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 64,
+    "fields": {
+        "question": 16,
+        "text": "To study in forest",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 65,
+    "fields": {
+        "question": 17,
+        "text": "Lakshmana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 66,
+    "fields": {
+        "question": 17,
+        "text": "Bharata",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 67,
+    "fields": {
+        "question": 17,
+        "text": "Shatrughna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 68,
+    "fields": {
+        "question": 17,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 69,
+    "fields": {
+        "question": 18,
+        "text": "14 years",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 70,
+    "fields": {
+        "question": 18,
+        "text": "10 years",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 71,
+    "fields": {
+        "question": 18,
+        "text": "7 years",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 72,
+    "fields": {
+        "question": 18,
+        "text": "20 years",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 73,
+    "fields": {
+        "question": 19,
+        "text": "Kaikeyi",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 74,
+    "fields": {
+        "question": 19,
+        "text": "Kaushalya",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 75,
+    "fields": {
+        "question": 19,
+        "text": "Sumitra",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 76,
+    "fields": {
+        "question": 19,
+        "text": "Sita",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 77,
+    "fields": {
+        "question": 20,
+        "text": "Dandaka Forest",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 78,
+    "fields": {
+        "question": 20,
+        "text": "Ayodhya",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 79,
+    "fields": {
+        "question": 20,
+        "text": "Lanka",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 80,
+    "fields": {
+        "question": 20,
+        "text": "Kishkindha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 81,
+    "fields": {
+        "question": 21,
+        "text": "Sita",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 82,
+    "fields": {
+        "question": 21,
+        "text": "Radha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 83,
+    "fields": {
+        "question": 21,
+        "text": "Draupadi",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 84,
+    "fields": {
+        "question": 21,
+        "text": "Rukmini",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 85,
+    "fields": {
+        "question": 22,
+        "text": "Tataka",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 86,
+    "fields": {
+        "question": 22,
+        "text": "Ravana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 87,
+    "fields": {
+        "question": 22,
+        "text": "Kumbhakarna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 88,
+    "fields": {
+        "question": 22,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 89,
+    "fields": {
+        "question": 23,
+        "text": "Ravana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 90,
+    "fields": {
+        "question": 23,
+        "text": "Kumbhakarna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 91,
+    "fields": {
+        "question": 23,
+        "text": "Indrajit",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 92,
+    "fields": {
+        "question": 23,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 93,
+    "fields": {
+        "question": 24,
+        "text": "Hanuman",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 94,
+    "fields": {
+        "question": 24,
+        "text": "Sugriva",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 95,
+    "fields": {
+        "question": 24,
+        "text": "Jambavan",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 96,
+    "fields": {
+        "question": 24,
+        "text": "Vali",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 97,
+    "fields": {
+        "question": 25,
+        "text": "Dandaka",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 98,
+    "fields": {
+        "question": 25,
+        "text": "Kishkindha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 99,
+    "fields": {
+        "question": 25,
+        "text": "Lanka",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 100,
+    "fields": {
+        "question": 25,
+        "text": "Ayodhya",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 101,
+    "fields": {
+        "question": 26,
+        "text": "Sugriva",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 102,
+    "fields": {
+        "question": 26,
+        "text": "Vali",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 103,
+    "fields": {
+        "question": 26,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 104,
+    "fields": {
+        "question": 26,
+        "text": "Jambavan",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 105,
+    "fields": {
+        "question": 27,
+        "text": "Vali",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 106,
+    "fields": {
+        "question": 27,
+        "text": "Ravana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 107,
+    "fields": {
+        "question": 27,
+        "text": "Kumbhakarna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 108,
+    "fields": {
+        "question": 27,
+        "text": "Indrajit",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 109,
+    "fields": {
+        "question": 28,
+        "text": "Sugriva",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 110,
+    "fields": {
+        "question": 28,
+        "text": "Vali",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 111,
+    "fields": {
+        "question": 28,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 112,
+    "fields": {
+        "question": 28,
+        "text": "Jambavan",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 113,
+    "fields": {
+        "question": 29,
+        "text": "Hanuman",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 114,
+    "fields": {
+        "question": 29,
+        "text": "Sugriva",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 115,
+    "fields": {
+        "question": 29,
+        "text": "Vali",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 116,
+    "fields": {
+        "question": 29,
+        "text": "Jambavan",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 117,
+    "fields": {
+        "question": 30,
+        "text": "Vali",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 118,
+    "fields": {
+        "question": 30,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 119,
+    "fields": {
+        "question": 30,
+        "text": "Jambavan",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 120,
+    "fields": {
+        "question": 30,
+        "text": "Ravana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 121,
+    "fields": {
+        "question": 31,
+        "text": "Vali",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 122,
+    "fields": {
+        "question": 31,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 123,
+    "fields": {
+        "question": 31,
+        "text": "Jambavan",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 124,
+    "fields": {
+        "question": 31,
+        "text": "Ravana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 125,
+    "fields": {
+        "question": 32,
+        "text": "Kishkindha",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 126,
+    "fields": {
+        "question": 32,
+        "text": "Lanka",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 127,
+    "fields": {
+        "question": 32,
+        "text": "Dandaka",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 128,
+    "fields": {
+        "question": 32,
+        "text": "Ayodhya",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 129,
+    "fields": {
+        "question": 33,
+        "text": "Jambavan",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 130,
+    "fields": {
+        "question": 33,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 131,
+    "fields": {
+        "question": 33,
+        "text": "Sugriva",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 132,
+    "fields": {
+        "question": 33,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 133,
+    "fields": {
+        "question": 34,
+        "text": "Hanuman",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 134,
+    "fields": {
+        "question": 34,
+        "text": "Sugriva",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 135,
+    "fields": {
+        "question": 34,
+        "text": "Jambavan",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 136,
+    "fields": {
+        "question": 34,
+        "text": "Vali",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 137,
+    "fields": {
+        "question": 35,
+        "text": "Sanjeevani herb",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 138,
+    "fields": {
+        "question": 35,
+        "text": "Rama�s ring",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 139,
+    "fields": {
+        "question": 35,
+        "text": "Bow and arrow",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 140,
+    "fields": {
+        "question": 35,
+        "text": "Ravana�s sword",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 141,
+    "fields": {
+        "question": 36,
+        "text": "Sita",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 142,
+    "fields": {
+        "question": 36,
+        "text": "Ravana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 143,
+    "fields": {
+        "question": 36,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 144,
+    "fields": {
+        "question": 36,
+        "text": "Indrajit",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 145,
+    "fields": {
+        "question": 37,
+        "text": "By giving Rama�s ring",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 146,
+    "fields": {
+        "question": 37,
+        "text": "By sending a letter",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 147,
+    "fields": {
+        "question": 37,
+        "text": "By word of mouth",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 148,
+    "fields": {
+        "question": 37,
+        "text": "By song",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 149,
+    "fields": {
+        "question": 38,
+        "text": "Burned it",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 150,
+    "fields": {
+        "question": 38,
+        "text": "Captured Sita",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 151,
+    "fields": {
+        "question": 38,
+        "text": "Brought Ravana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 152,
+    "fields": {
+        "question": 38,
+        "text": "Built a bridge",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 153,
+    "fields": {
+        "question": 39,
+        "text": "Ravana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 154,
+    "fields": {
+        "question": 39,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 155,
+    "fields": {
+        "question": 39,
+        "text": "Indrajit",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 156,
+    "fields": {
+        "question": 39,
+        "text": "Kumbhakarna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 157,
+    "fields": {
+        "question": 40,
+        "text": "Ravana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 158,
+    "fields": {
+        "question": 40,
+        "text": "Kumbhakarna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 159,
+    "fields": {
+        "question": 40,
+        "text": "Indrajit",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 160,
+    "fields": {
+        "question": 40,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 161,
+    "fields": {
+        "question": 41,
+        "text": "Rama",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 162,
+    "fields": {
+        "question": 41,
+        "text": "Lakshmana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 163,
+    "fields": {
+        "question": 41,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 164,
+    "fields": {
+        "question": 41,
+        "text": "Sugriva",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 165,
+    "fields": {
+        "question": 42,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 166,
+    "fields": {
+        "question": 42,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 167,
+    "fields": {
+        "question": 42,
+        "text": "Sugriva",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 168,
+    "fields": {
+        "question": 42,
+        "text": "All of these",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 169,
+    "fields": {
+        "question": 43,
+        "text": "Brahmastra",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 170,
+    "fields": {
+        "question": 43,
+        "text": "Sudarshana Chakra",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 171,
+    "fields": {
+        "question": 43,
+        "text": "Trishula",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 172,
+    "fields": {
+        "question": 43,
+        "text": "Pasha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 173,
+    "fields": {
+        "question": 44,
+        "text": "Ravana's brother",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 174,
+    "fields": {
+        "question": 44,
+        "text": "Ravana's son",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 175,
+    "fields": {
+        "question": 44,
+        "text": "Rama's brother",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 176,
+    "fields": {
+        "question": 44,
+        "text": "King of Kishkindha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 177,
+    "fields": {
+        "question": 45,
+        "text": "Indrajit",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 178,
+    "fields": {
+        "question": 45,
+        "text": "Kumbhakarna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 179,
+    "fields": {
+        "question": 45,
+        "text": "Vibhishana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 180,
+    "fields": {
+        "question": 45,
+        "text": "Hanuman",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 181,
+    "fields": {
+        "question": 46,
+        "text": "He was crowned king",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 182,
+    "fields": {
+        "question": 46,
+        "text": "He went back to exile",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 183,
+    "fields": {
+        "question": 46,
+        "text": "He married again",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 184,
+    "fields": {
+        "question": 46,
+        "text": "He left the kingdom",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 185,
+    "fields": {
+        "question": 47,
+        "text": "Vibhishana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 186,
+    "fields": {
+        "question": 47,
+        "text": "Ravana",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 187,
+    "fields": {
+        "question": 47,
+        "text": "Indrajit",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 188,
+    "fields": {
+        "question": 47,
+        "text": "Kumbhakarna",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 189,
+    "fields": {
+        "question": 48,
+        "text": "Rama's sons",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 190,
+    "fields": {
+        "question": 48,
+        "text": "Ravana's sons",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 191,
+    "fields": {
+        "question": 48,
+        "text": "Hanuman's sons",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 192,
+    "fields": {
+        "question": 48,
+        "text": "Sugriva's sons",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 193,
+    "fields": {
+        "question": 49,
+        "text": "Valmiki",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 194,
+    "fields": {
+        "question": 49,
+        "text": "Vyasa",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 195,
+    "fields": {
+        "question": 49,
+        "text": "Tulsidas",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 196,
+    "fields": {
+        "question": 49,
+        "text": "Kalidasa",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 197,
+    "fields": {
+        "question": 50,
+        "text": "Returned to Vaikuntha",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 198,
+    "fields": {
+        "question": 50,
+        "text": "Died in battle",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 199,
+    "fields": {
+        "question": 50,
+        "text": "Lived as a hermit",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 200,
+    "fields": {
+        "question": 50,
+        "text": "Became king of Lanka",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 201,
+    "fields": {
+        "question": 51,
+        "text": "Sita",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 202,
+    "fields": {
+        "question": 51,
+        "text": "Radha",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 203,
+    "fields": {
+        "question": 51,
+        "text": "Draupadi",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 204,
+    "fields": {
+        "question": 51,
+        "text": "Rukmini",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 205,
+    "fields": {
+        "question": 52,
+        "text": "Lakshmana",
+        "is_correct": true
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 206,
+    "fields": {
+        "question": 52,
+        "text": "Bharata",
+        "is_correct": false
+    }
+},
+{
+    "model": "subhub.choice",
+    "pk": 207,
+    "fields": {
+        "question": 52,
+        "text": "Shatrughna",
+        "is_correct": false
+    }
+}
+]
