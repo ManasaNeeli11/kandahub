@@ -217,36 +217,35 @@ def quizzes_list(request):
     return render(request, 'quizzes_list.html', {'quiz_topics': quizzes})
 
 @login_required
-def quiz_detail(request, quiz_id):
-    quiz = get_object_or_404(Quiz, id=quiz_id)
-    questions = quiz.questions.prefetch_related('choices').all()
-
+def quiz_detail(request, pk):
+    quiz = get_object_or_404(Quiz.objects.prefetch_related('questions__choices'), pk=pk)
+    
     if request.method == 'POST':
-        total = questions.count()
+        total = quiz.questions.count()
         correct = 0
-        for question in questions:
+        
+        for question in quiz.questions.all():
             selected_choice_id = request.POST.get(f'question_{question.id}')
             if selected_choice_id:
-                choice = Choice.objects.filter(id=selected_choice_id, question=question).first()
+                choice = question.choices.filter(id=selected_choice_id).first()
                 if choice and choice.is_correct:
                     correct += 1
 
-        # Save user response
         UserQuizResponse.objects.create(
             user=request.user,
             quiz=quiz,
             score=correct
         )
         
-        return render(request, 'quiz_result.html', {
+        return render(request, 'quiz_result.html', {  # Note the path change
             'quiz': quiz,
             'score': correct,
             'total': total,
         })
-
+    
     return render(request, 'quiz_detail.html', {
         'quiz': quiz,
-        'questions': questions
+        'questions': quiz.questions.all(),
     })
 
 def quiz_list_view(request):

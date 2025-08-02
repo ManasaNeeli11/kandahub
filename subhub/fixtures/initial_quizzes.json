@@ -1,0 +1,39 @@
+[
+{
+  "model": "subhub.quiz",
+  "pk": 1,
+  "fields": {
+    "title": "Ramayana Basics",
+    "description": "Test your basic knowledge of the Ramayana."
+  }
+},
+{
+  "model": "subhub.quiz",
+  "pk": 2,
+  "fields": {
+    "title": "Characters of Ramayana",
+    "description": "Identify and understand the characters."
+  }
+},
+{
+  "model": "subhub.quiz",
+  "pk": 3,
+  "fields": {
+    "title": "Events & Places",
+    "description": "Explore the major events and locations."
+  }
+},
+{
+  "model": "subhub.quiz",
+  "pk": 4,
+  "fields": {
+    "title": "Bala Kanda Quiz",
+    "description": "Questions on the childhood and early life of Lord Rama."
+  }
+},
+{
+  "model": "subhub.quiz",
+  "pk": 5,
+  "fields": {
+    "title": "Ayodhya Kanda Quiz",
+    "description": 

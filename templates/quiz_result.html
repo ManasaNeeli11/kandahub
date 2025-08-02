@@ -26,8 +26,9 @@
       box-shadow: 0 4px 15px rgba(245, 124, 0, 0.5);
       font-size: 1.8rem;
       font-weight: 700;
+      transition: all 0.3s ease;
     }
-    .score-box:hover{
+    .score-box:hover {
       background-color: #f9a825;
       color: #3e2723;
       box-shadow: 0 0 16px #fbc02d;
@@ -44,5 +45,57 @@
   </div>
   <br>
   <a href="{% url 'quizzes' %}" class="btn btn-primary mt-4">Back to Quizzes</a>
+
+ <!-- Canvas Confetti Library -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  window.onload = function () {
+    const duration = 5 * 1000; // 5 seconds
+    const animationEnd = Date.now() + duration;
+    const defaults = {
+      startVelocity: 25,
+      spread: 160,
+      ticks: 120,
+      gravity: 1.1,
+      scalar: 1.6,
+      zIndex: 1000,
+      shapes: ['square'],
+      colors: [
+        '#f44336', // red
+        '#2196f3', // blue
+        '#ffeb3b', // yellow
+        '#4caf50', // green
+        '#9c27b0', // purple
+        '#ff9800', // orange
+        '#00bcd4', // cyan
+        '#e91e63'  // pink
+      ]
+    };
+
+    const interval = setInterval(function () {
+      const timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        clearInterval(interval);
+        return;
+      }
+
+      // Launch confetti across the entire page
+      for (let i = 0; i < 5; i++) {
+        confetti({
+          particleCount: 10,
+          origin: {
+            x: Math.random(), // random horizontal origin
+            y: 0 // top of the page
+          },
+          angle: 90,
+          ...defaults
+        });
+      }
+    }, 100);
+  };
+</script>
+
+
 </body>
 </html>
