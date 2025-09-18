@@ -1,0 +1,82 @@
+[
+    {
+        "model": "subhub.quiz",
+        "pk": 1,
+        "fields": {
+            "title": "Ramayana Basics",
+            "description": "Introduction to the epic Ramayana, its significance and structure."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 2,
+        "fields": {
+            "title": "Characters of Ramayana",
+            "description": "Key figures including Rama, Sita, Lakshmana, Hanuman and Ravana."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 3,
+        "fields": {
+            "title": "Events &amp; Places",
+            "description": "Important locations and events in the Ramayana's narrative."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 4,
+        "fields": {
+            "title": "Bala Kanda Quiz",
+            "description": "Test your knowledge of Rama's childhood and early life events."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 5,
+        "fields": {
+            "title": "Ayodhya Kanda Quiz",
+            "description": "Questions about Rama's exile and the events in Ayodhya."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 6,
+        "fields": {
+            "title": "Aranya Kanda Quiz",
+            "description": "Quiz on the forest exile period and Sita's abduction."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 7,
+        "fields": {
+            "title": "Kishkindha Kanda Quiz",
+            "description": "Test about the Kishkindha events and Hanuman's meeting with Rama."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 8,
+        "fields": {
+            "title": "Sundara Kanda Quiz",
+            "description": "Questions focused on Hanuman's journey to Lanka."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 9,
+        "fields": {
+            "title": "Yuddha Kanda Quiz",
+            "description": "Quiz about the great war between Rama and Ravana."
+        }
+    },
+    {
+        "model": "subhub.quiz",
+        "pk": 10,
+        "fields": {
+            "title": "Uttara Kanda Quiz",
+            "description": "Questions on the concluding events of the Ramayana."
+        }
+    }
+]

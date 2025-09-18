@@ -12,13 +12,7 @@ urlpatterns=[
     path('logout/', views.logout, name='logout'),
     path('quizzes/', views.quizzes, name='quizzes'),
     path('quizzes/<int:pk>/', views.quiz_detail, name='quiz_detail'),  # Changed quiz_id to pk
- 
-  
- 
-    
-   
-    
-]
+ ]
 
 
     

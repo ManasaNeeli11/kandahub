@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "title": "Ramayana Basics",
+        "description": "Introduction to the epic Ramayana, its significance and structure."
+    },
+    {
+        "id": 2,
+        "title": "Characters of Ramayana",
+        "description": "Key figures including Rama, Sita, Lakshmana, Hanuman and Ravana."
+    },
+    {
+        "id": 3,
+        "title": "Events &amp; Places",
+        "description": "Important locations and events in the Ramayana's narrative."
+    },
+    {
+        "id": 4,
+        "title": "Bala Kanda Quiz",
+        "description": "Test your knowledge of Rama's childhood and early life events."
+    },
+    {
+        "id": 5,
+        "title": "Ayodhya Kanda Quiz",
+        "description": "Questions about Rama's exile and the events in Ayodhya."
+    },
+    {
+        "id": 6,
+        "title": "Aranya Kanda Quiz",
+        "description": "Quiz on the forest exile period and Sita's abduction."
+    },
+    {
+        "id": 7,
+        "title": "Kishkindha Kanda Quiz",
+        "description": "Test about the Kishkindha events and Hanuman's meeting with Rama."
+    },
+    {
+        "id": 8,
+        "title": "Sundara Kanda Quiz",
+        "description": "Questions focused on Hanuman's journey to Lanka."
+    },
+    {
+        "id": 9,
+        "title": "Yuddha Kanda Quiz",
+        "description": "Quiz about the great war between Rama and Ravana."
+    },
+    {
+        "id": 10,
+        "title": "Uttara Kanda Quiz",
+        "description": "Questions on the concluding events of the Ramayana."
+    }
+]
