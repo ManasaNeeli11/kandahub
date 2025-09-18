@@ -60,7 +60,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
@@ -87,21 +86,31 @@ WSGI_APPLICATION = 'kandahub.wsgi.application'
 
 
 
+# ============================
+# UPDATED DATABASE, STATIC, MEDIA, SECURITY
+# ============================
 
-DEBUG = os.getenv("DEBUG", "False") == "True"
-
-# ✔ DATABASES: Handles both dev and production
-
+# DATABASE: Use Render DATABASE_URL if present, fallback to local Postgres
+# DATABASE: Use Render DATABASE_URL if present, fallback to local Postgres
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'kandahub_db',
-        'USER': 'kandahub_user',
-        'PASSWORD': 'Manasa@11_5711',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL', 'postgresql://kandahubdb_user:XeKfNGMynRvkpdGGWh8fC23pV6KsiGsh@dpg-d10mr33e5dus73ag2rgg-a/kandahubdb')
+    )
 }
+
+# Static files (CSS, JS, Images)
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
+# Media files (uploads)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+# Security for production
+SESSION_COOKIE_SECURE = not DEBUG
+CSRF_COOKIE_SECURE = not DEBUG
 
 
 
@@ -136,23 +145,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Secure cookies for production (HTTPS)
-SESSION_COOKIE_SECURE = True
-CSRF_COOKIE_SECURE = True
-
-
-DEBUG=True
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]  # This tells Django where your dev static files live
-STATIC_ROOT = BASE_DIR / "staticfiles"    # For production (collectstatic)
-
-MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / "media"
-
-
-
-
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -171,4 +163,3 @@ LOGGING = {
         'level': 'ERROR',  # Log only errors (not DEBUG or INFO)
     },
 }
-
