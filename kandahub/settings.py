@@ -93,8 +93,10 @@ WSGI_APPLICATION = 'kandahub.wsgi.application'
 # DATABASE: Use Render DATABASE_URL if present, fallback to local Postgres
 # DATABASE: Use Render DATABASE_URL if present, fallback to local Postgres
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgresql://kandahubdb_user:password@full-host.render.com/kandahubdb')
+    "default": dj_database_url.config(
+        default=os.environ.get("DATABASE_URL"),
+        conn_max_age=600,
+        ssl_require=True
     )
 }
 
