@@ -1,145 +1,306 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KandaHub - Divine Ramayana</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #fdf6f0;
-            color: #333;
-        }
-        .navbar {
-            background-color: #6a1b9a;
-        }
-        .navbar-brand, .nav-link {
-            color: #fff !important;
-        }
-        .hero {
-            background: url('/static/images/ramayana-bg.jpg') no-repeat center center;
-            background-size: cover;
-            height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-        .hero h1 {
-            font-size: 4rem;
-            text-shadow: 2px 2px 5px #000;
-        }
-        .section {
-            padding: 60px 20px;
-        }
-        .card {
-            border-radius: 15px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-        }
-        .footer {
-            background-color: #6a1b9a;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-        /* ✅ Added navbar toggler fix */
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOME PAGE</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+   
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <style>
+    body {
+      background: 
+        url('https://www.transparenttextures.com/patterns/gplay.png'), 
+        linear-gradient(135deg, #4a3000 0%, #f9a825 40%, #ffcc00 70%, #f57c00 100%);
+      background-blend-mode: overlay;
+      background-repeat: repeat;
+      font-family: 'Poppins', sans-serif;
+      color: #f3c307;
+      min-height: 100vh;
+    }
+
+    .navbar-custom {
+      background: linear-gradient(90deg, #fff8e1 0%, #fff3c4 50%, #fff8e1 100%);
+      box-shadow: 0 4px 15px rgba(255, 195, 68, 0.4);
+      border-bottom: 2px solid #f7c948;
+    }
+
+    .navbar-nav-center {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      width: 100%;
+    }
+
+    @media (min-width: 992px) {
+      .navbar-nav-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+        gap: 2rem;
+      }
+    }
+
+    .logo-img {
+      height: 40px;
+      border-radius: 8px;
+      filter: drop-shadow(0 0 8px #f9a825);
+      transition: filter 0.3s ease;
+    }
+
+    @media (min-width: 768px) {
+      .logo-img {
+        height: 48px;
+      }
+    }
+
+    .logo-img:hover {
+      filter: drop-shadow(0 0 12px #fbc02d);
+    }
+
+    .brand-text .kanda {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #f57c00;
+      text-shadow: 0 1px 4px rgba(245, 124, 0, 0.7);
+      line-height: 0.8;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .brand-text .kanda {
+        font-size: 1.6rem;
+      }
+    }
+
+    .brand-text .hub {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #1565c0;
+      text-shadow: 0 1px 4px rgba(21, 101, 192, 0.6);
+      letter-spacing: 0.15em;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .brand-text .hub {
+        font-size: 1.25rem;
+      }
+    }
+
+    .nav-link {
+      color: #5a4630 !important;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color 0.3s ease, text-shadow 0.3s ease;
+      padding: 0.5rem 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .nav-link {
+        font-size: 1.1rem;
+      }
+    }
+
+    .nav-link:hover,
+    .nav-link:focus {
+      color: #f9a825 !important;
+      text-shadow: 0 0 8px #fbc02d;
+    }
+
+    .btn-outline-saffron {
+      color: #f57c00;
+      border-color: #f57c00;
+      font-weight: 800;
+      box-shadow: 0 0 8px rgba(245, 124, 0, 0.7);
+      transition: all 0.3s ease;
+      padding: 0.375rem 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .btn-outline-saffron {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    .btn-outline-saffron:hover {
+      background-color: #f9a825;
+      color: #fff;
+      box-shadow: 0 0 16px #fbc02d;
+    }
+
+    .btn-primary-divine {
+      background-color: #1565c0;
+      border-color: #1565c0;
+      font-weight: 800;
+      color: white;
+      box-shadow: 0 0 10px rgba(21, 101, 192, 0.7);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      padding: 0.375rem 0.75rem;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) {
+      .btn-primary-divine {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+    }
+
+    .btn-primary-divine:hover {
+      background-color: #0d3c75;
+      border-color: #0d3c75;
+      box-shadow: 0 0 18px #0d3c75;
+      color: orangered;
+    }
+
+    /* Navbar toggler icon fix */
+    .navbar-toggler-icon {
+       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0,0,0,0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* Gallery, Kandas, Quizzes, Contact styles remain unchanged */
+    /* ... include all your CSS from previous code ... */
+  </style>
 </head>
-<body>
+<body class="bg-light">
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="/static/images/logo.png" alt="KandaHub Logo" width="40" height="40" class="d-inline-block align-text-top">
-                KandaHub
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/kandas/">Kandas</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/quiz/">Quiz</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div>
-            <h1>Welcome to the Divine Ramayana</h1>
-            <p class="lead">Explore the epic journey of Lord Rama through the seven Kandas</p>
-            <a href="/kandas/" class="btn btn-warning btn-lg mt-3">Explore Kandas</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section text-center">
-        <div class="container">
-            <h2 class="mb-4">About Ramayana</h2>
-            <p>The Ramayana, composed by Sage Valmiki, is one of the greatest epics in Indian literature. It narrates the life of Lord Rama, his exile, the abduction of Sita by Ravana, and the triumph of good over evil. At KandaHub, we bring you each Kanda with beautiful storytelling and translations in English, Hindi, and Telugu.</p>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="section bg-light">
-        <div class="container">
-            <h2 class="mb-4 text-center">Gallery</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/static/images/gallery1.jpg" class="card-img-top" alt="Ram">
-                        <div class="card-body">
-                            <p class="card-text">Lord Rama - The epitome of virtue.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/static/images/gallery2.jpg" class="card-img-top" alt="Sita">
-                        <div class="card-body">
-                            <p class="card-text">Goddess Sita - The symbol of purity.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="/static/images/gallery3.jpg" class="card-img-top" alt="Hanuman">
-                        <div class="card-body">
-                            <p class="card-text">Hanuman - The ultimate devotee.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ✅ Fixed missing closing div -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom shadow-sm px-3">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+      <img src="{% static 'media/pictures/KHUBNEW.jpg' %}" alt="KandaHub Logo" class="logo-img" />
+      <div class="brand-text d-flex flex-column">
+        <span class="kanda">Kanda</span>
+        <span class="hub">Hub</span>
+      </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav navbar-nav-center mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'kandas' %}">Kandas</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'quizzes' %}">Quizzes</a></li>
+      </ul>
+      <div class="d-flex align-items-center ms-lg-auto gap-3">
+        {% if user.is_authenticated %}
+          <form action="{% url 'logout' %}" method="post" class="d-inline">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-outline-saffron">Logout</button>
+          </form>
+        {% else %}
+          <a class="btn btn-outline-saffron" href="{% url 'login' %}">Login</a>
+          <a class="btn btn-primary-divine" href="{% url 'signup' %}">Signup</a>
+        {% endif %}
+      </div>
     </div>
+  </div>
+</nav>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section text-center">
-        <div class="container">
-            <h2 class="mb-4">Contact Us</h2>
-            <p>If you have feedback, suggestions, or wish to collaborate, feel free to reach out.</p>
-            <a href="mailto:support@kandahub.com" class="btn btn-primary">Email Us</a>
+<!-- Main Content -->
+<div class="container mt-4 mt-md-5">
+  <!-- Welcome Section -->
+  <div class="text-center mb-4 mb-md-5">
+    <h1 class="text-warning fw-bold">Welcome to KandaHub</h1>
+    <p class="lead">Explore the divine epic of Lord Rama, a journey of dharma, devotion, and destiny.</p>
+    <div class="mb-4 d-flex justify-content-center gap-3 flex-wrap btn-group-custom">
+      {% if user.is_authenticated %}
+        <a href="{% url 'quizzes' %}" class="btn btn-outline-saffron">Explore Now</a>
+        <a href="{% url 'kandas' %}" class="btn btn-primary-divine px-4">Read Kandas</a>
+      {% else %}
+        <a href="{% url 'login' %}?next={% url 'explore' %}" class="btn btn-outline-saffron">Login to Explore</a>
+        <a href="{% url 'login' %}?next={% url 'kandas' %}" class="btn btn-primary-divine px-4">Login to Read</a>
+      {% endif %}
+    </div>
+  </div>
+  
+  <!-- Image Gallery -->
+  <div class="image-gallery">
+    <div class="img-container"><img src="{% static 'media/pictures/now rama 2.jpg' %}" alt="Sita" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/2sita.jpg' %}" alt="Lord Rama" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/3rama.jpg' %}" alt="Rama 2" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/ram-sita.jpg' %}" alt="Ram and Sita" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/original_ravana.jpg' %}" alt="Lava Kusha" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/6rama.jpg' %}" alt="Lord Rama" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/now lava and kusha.jpg' %}" alt="Rama 3" /></div>
+    <div class="img-container"><img src="{% static 'media/pictures/ayodhya.jpg' %}" alt="Ayodhya" /></div>
+  </div> <!-- Gallery ends -->
+
+  <!-- Kandas Section -->
+  <div class="container mt-5">
+    <h2 class="text-center text-warning mb-4">Kandas</h2>
+    <div class="row g-4">
+      {% for kanda in kandas %}
+      <div class="col-md-4">
+        <div class="card bg-dark text-light h-100 shadow-sm" data-aos="fade-up">
+          <img src="{{ kanda.image.url }}" class="card-img-top" alt="{{ kanda.title }}">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ kanda.title }}</h5>
+            <p class="card-text">{{ kanda.brief_story }}</p>
+            <a href="{% url 'kanda_detail' kanda.id %}" class="btn btn-primary-divine mt-auto">View More</a>
+          </div>
         </div>
-    </section>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 KandaHub. All Rights Reserved.</p>
-    </footer>
+  <!-- Quizzes Section -->
+  <div class="container mt-5">
+    <h2 class="text-center text-warning mb-4">Quizzes</h2>
+    <div class="row g-4">
+      {% for quiz in quizzes %}
+      <div class="col-md-4">
+        <div class="card bg-dark text-light h-100 shadow-sm" data-aos="fade-up">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ quiz.title }}</h5>
+            <p class="card-text">{{ quiz.description|truncatewords:20 }}</p>
+            <a href="{% url 'quiz_detail' quiz.id %}" class="btn btn-outline-saffron mt-auto">Take Quiz</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Contact Section -->
+  <div class="container mt-5 mb-5">
+    <h2 class="text-center text-warning mb-4">Contact Us</h2>
+    <form action="{% url 'contact' %}" method="post" class="mx-auto" style="max-width: 600px;">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="id_name" class="form-label">Name</label>
+        <input type="text" name="name" id="id_name" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="id_email" class="form-label">Email</label>
+        <input type="email" name="email" id="id_email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label for="id_message" class="form-label">Message</label>
+        <textarea name="message" id="id_message" rows="5" class="form-control" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary-divine w-100">Send Message</button>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
 </body>
 </html>
